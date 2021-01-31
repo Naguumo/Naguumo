@@ -1,4 +1,8 @@
-### Hi there 👋
+## Hi there 👋, I'm Ishaan Bharal
+
+[![Naguumo's GitHub stats](https://github-readme-stats.vercel.app/api?username=naguumo)](https://github.com/anuraghazra/github-readme-stats)
+
+## I work mostly in JavaScript and Python and am looking to grow that skillset
 
 <!--
 **Naguumo/Naguumo** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
