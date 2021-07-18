@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import { TopBar } from '@components/TopBar'
 
 export const Home = () => {
   return (

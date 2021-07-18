@@ -13,16 +13,22 @@ specifiers:
   react: npm:@preact/compat
   react-dom: npm:@preact/compat
   react-ssr-prepass: npm:preact-ssr-prepass
+  react-transition-group: npm:preact-transition-group
+  sanitize.css: ^12.0.1
+  sass: ^1.35.2
   typescript: ^4.3.5
 
 dependencies:
-  next: 11.0.1_b7bf8f9902a0ffed208039dfdf1dd5b3
+  next: 11.0.1_28d127fe04f135a13a294872fd5081a3
   next-plugin-preact: 3.0.6_669c8a243f82c2508ab45421dac2a9a0
   preact: 10.5.14
   preact-render-to-string: 5.1.19_preact@10.5.14
   react: /@preact/compat/0.0.4_preact@10.5.14
   react-dom: /@preact/compat/0.0.4_preact@10.5.14
   react-ssr-prepass: /preact-ssr-prepass/1.2.0_preact@10.5.14
+  react-transition-group: /preact-transition-group/2.0.0_preact@10.5.14
+  sanitize.css: 12.0.1
+  sass: 1.35.2
 
 devDependencies:
   '@types/react': 17.0.14
@@ -226,7 +232,7 @@ packages:
       '@prefresh/core': 1.3.2_preact@10.5.14
       '@prefresh/utils': 1.1.1
       '@prefresh/webpack': 3.3.2_8ddefae582772128c85c3648ada8b736
-      next: 11.0.1_b7bf8f9902a0ffed208039dfdf1dd5b3
+      next: 11.0.1_28d127fe04f135a13a294872fd5081a3
       preact: 10.5.14
     dev: false
 
@@ -707,6 +713,21 @@ packages:
       fsevents: 2.3.2
     dev: false
 
+  /chokidar/3.5.2:
+    resolution: {integrity: sha512-ekGhOnNVPgT77r4K/U3GDhu+FQ2S8TnK/s2KbIGXi0SZWuwkZ2QNyfWdZW+TVfn84DpEP7rLeCt2UI6bJ8GwbQ==}
+    engines: {node: '>= 8.10.0'}
+    dependencies:
+      anymatch: 3.1.2
+      braces: 3.0.2
+      glob-parent: 5.1.2
+      is-binary-path: 2.1.0
+      is-glob: 4.0.1
+      normalize-path: 3.0.0
+      readdirp: 3.6.0
+    optionalDependencies:
+      fsevents: 2.3.2
+    dev: false
+
   /cipher-base/1.0.4:
     resolution: {integrity: sha512-Kkht5ye6ZGmwv40uUDZztayT2ThLQGfnj/T71N/XzeZeo3nf8foyW7zGTsPYkEya3m5f3cAypH+qe7YOrM1U2Q==}
     dependencies:
@@ -1057,7 +1078,7 @@ packages:
       eslint-plugin-jsx-a11y: 6.4.1_eslint@7.31.0
       eslint-plugin-react: 7.24.0_eslint@7.31.0
       eslint-plugin-react-hooks: 4.2.0_eslint@7.31.0
-      next: 11.0.1_b7bf8f9902a0ffed208039dfdf1dd5b3
+      next: 11.0.1_28d127fe04f135a13a294872fd5081a3
       typescript: 4.3.5
     transitivePeerDependencies:
       - supports-color
@@ -1982,7 +2003,7 @@ packages:
       - webpack
     dev: false
 
-  /next/11.0.1_b7bf8f9902a0ffed208039dfdf1dd5b3:
+  /next/11.0.1_28d127fe04f135a13a294872fd5081a3:
     resolution: {integrity: sha512-yR7be7asNbvpVNpi6xxEg28wZ7Gqmj1nOt0sABH9qORmF3+pms2KZ7Cng33oK5nqPIzEEFJD0pp2PCe3/ueMIg==}
     engines: {node: '>=12.0.0'}
     hasBin: true
@@ -2042,6 +2063,7 @@ packages:
       react-dom: /@preact/compat/0.0.4_preact@10.5.14
       react-is: 17.0.2
       react-refresh: 0.8.3
+      sass: 1.35.2
       stream-browserify: 3.0.0
       stream-http: 3.1.1
       string_decoder: 1.3.0
@@ -2390,6 +2412,14 @@ packages:
       preact: 10.5.14
     dev: false
 
+  /preact-transition-group/2.0.0_preact@10.5.14:
+    resolution: {integrity: sha512-jqmRNDDlDdzRigAOw16jcK6rYVJF1aPBbhcJMw/YMc5PDm+LYnCoBV/rBEwyuEvsqGkq2SDO6w1cAZx++YowVA==}
+    peerDependencies:
+      preact: '*'
+    dependencies:
+      preact: 10.5.14
+    dev: false
+
   /preact/10.5.14:
     resolution: {integrity: sha512-KojoltCrshZ099ksUZ2OQKfbH66uquFoxHSbnwKbTJHeQNvx42EmC7wQVWNuDt6vC5s3nudRHFtKbpY4ijKlaQ==}
     dev: false
@@ -2560,6 +2590,13 @@ packages:
       picomatch: 2.3.0
     dev: false
 
+  /readdirp/3.6.0:
+    resolution: {integrity: sha512-hOS089on8RduqdbhvQ5Z37A0ESjsqz6qnRcffsMU3495FuTdqSm+7bhJ29JvIOsBDEEnan5DPu9t3To9VRlMzA==}
+    engines: {node: '>=8.10.0'}
+    dependencies:
+      picomatch: 2.3.0
+    dev: false
+
   /regenerator-runtime/0.13.7:
     resolution: {integrity: sha512-a54FxoJDIr27pgf7IgeQGxmqUNYrcV338lf/6gH456HZ/PhX+5BcwHXG9ajESmwe6WRO0tAzRUrRmNONWgkrew==}
 
@@ -2635,6 +2672,18 @@ packages:
 
   /safer-buffer/2.1.2:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
+    dev: false
+
+  /sanitize.css/12.0.1:
+    resolution: {integrity: sha512-QbusSBnWHaRBZeTxsJyknwI0q+q6m1NtLBmB76JfW/rdVN7Ws6Zz70w65+430/ouVcdNVT3qwrDgrM6PaYyRtw==}
+    dev: false
+
+  /sass/1.35.2:
+    resolution: {integrity: sha512-jhO5KAR+AMxCEwIH3v+4zbB2WB0z67V1X0jbapfVwQQdjHZUGUyukpnoM6+iCMfsIUC016w9OPKQ5jrNOS9uXw==}
+    engines: {node: '>=8.9.0'}
+    hasBin: true
+    dependencies:
+      chokidar: 3.5.2
     dev: false
 
   /semver/5.7.1:
