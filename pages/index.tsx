@@ -1,13 +1,9 @@
-import Head from 'next/head'
+import { DefaultHead } from '@components/DefaultHead'
 
 export const Home = () => {
   return (
     <>
-      <Head>
-        <title>Ishaan Bharal</title>
-        <meta name='description' content={`Ishaan Bharal's Homepage`} />
-        <link rel='icon' href='/favicon.ico' />
-      </Head>
+      <DefaultHead />
 
       <main>
         <h1>Index</h1>
