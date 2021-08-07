@@ -1,12 +1,5 @@
-import { DefaultHead } from '@components/DefaultHead'
-
 export const Gallery = () => {
-  return (
-    <>
-      <DefaultHead />
-      Gallery
-    </>
-  )
+  return <>Gallery</>
 }
 
 export default Gallery

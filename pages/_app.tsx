@@ -1,36 +1,50 @@
 import type { AppProps } from 'next/app'
-import { useState } from 'react'
-import clsx from 'clsx'
-import { Navigation } from '@components/Navigation'
+import 'modern-normalize'
+import { Box } from '@primitives/Box'
+import { DefaultHead } from '@components/DefaultHead'
+import { SideNav } from '@components/SideNav'
+import { useTheme } from '@lib/useTheme'
+import { createGlobalStyles } from '@theme'
 
-import 'tailwindcss/tailwind.css'
+const globalStyles = createGlobalStyles({
+  '*': {
+    '&::-webkit-scrollbar': {
+      // width: '1rem',
+    },
+  },
+  '#_app': {
+    color: '$text',
+    backgroundColor: '$background',
+  },
+  svg: {
+    verticalAlign: 'baseline',
+  },
+})
 
 const App = ({ Component, pageProps }: AppProps) => {
-  const [darkMode, setDarkMode] = useState(true)
+  // useTheme needs to be here to ensure theme class is maintained
+  const [_theme] = useTheme()
+
+  globalStyles()
+
   return (
-    <div
-      className={clsx(
-        darkMode
-          ? 'dark bg-blueGray-900 text-gray-300'
-          : 'bg-blueGray-100 text-gray-700',
-        'grid grid-cols-5',
-        'min-h-screen'
-      )}
-    >
-      <div className='col-span-1'>
-        <Navigation />
-      </div>
-      <div className='col-span-4 container mx-auto'>
+    <Box id='_app' css={{ display: 'flex', height: '100vh' }}>
+      <DefaultHead />
+      <SideNav />
+      <Box
+        as='main'
+        css={{
+          flex: 1,
+          overflow: 'auto',
+          margin: '1rem',
+          padding: '1rem',
+          borderRadius: 10,
+          backgroundColor: '$secondary',
+        }}
+      >
         <Component {...pageProps} />
-        <button
-          onClick={() => {
-            setDarkMode((val) => !val)
-          }}
-        >
-          Dark Mode
-        </button>
-      </div>
-    </div>
+      </Box>
+    </Box>
   )
 }
 export default App

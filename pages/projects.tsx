@@ -1,12 +1,5 @@
-import { DefaultHead } from '@components/DefaultHead'
-
 export const Projects = () => {
-  return (
-    <>
-      <DefaultHead />
-      Projects
-    </>
-  )
+  return <>Projects</>
 }
 
 export default Projects
